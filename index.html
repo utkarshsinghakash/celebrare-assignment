@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Customization</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <button onclick="undo()">Undo</button>
+    <button onclick="redo()">Redo</button>
+    <div class="container">
+      <div
+        id="textContainer"
+        contenteditable="true"
+        onmousedown="startDragging(event)"
+      >
+        Drag me and click to customize!
+      </div>
+
+      <div id="options">
+        <label
+          >Font Style:
+          <select id="fontStyle">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+          </select>
+        </label>
+
+        <label
+          >Font Size:
+          <input type="number" id="fontSize" value="16" min="8" max="72" />
+        </label>
+
+        <label
+          >Text Color:
+          <input type="color" id="textColor" value="#000000" />
+        </label>
+
+        <button onclick="applyStyles()">Apply Styles</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
